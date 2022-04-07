@@ -9,6 +9,6 @@ import net.minecraft.item.ItemStack
 
 object BoosterModelPredicateProvider : UnclampedModelPredicateProvider {
     override fun unclampedCall(stack: ItemStack, world: ClientWorld?, entity: LivingEntity?, seed: Int): Float {
-        return if (stack.tag?.active == true) 1f else 0f
+        return if (stack.nbt?.active == true) 1f else 0f
     }
 }

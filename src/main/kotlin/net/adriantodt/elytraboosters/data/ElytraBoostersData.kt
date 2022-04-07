@@ -37,15 +37,15 @@ interface ElytraBoostersData {
         fun convertTo(stack: ItemStack, item: Item): ItemStack {
             val converted = ItemStack(item)
             converted.damage = stack.damage
-            val tag = stack.tag
-            tag?.getInt("TicksLeft")?.let { converted.orCreateTag.putInt("TicksLeft", it) }
-            tag?.getBoolean("Unbreakable")?.let { converted.orCreateTag.putBoolean("Unbreakable", it) }
+            val tag = stack.nbt
+            tag?.getInt("TicksLeft")?.let { converted.orCreateNbt.putInt("TicksLeft", it) }
+            tag?.getBoolean("Unbreakable")?.let { converted.orCreateNbt.putBoolean("Unbreakable", it) }
             return converted
         }
 
         fun secondsLeft(stack: ItemStack): Double {
             val damageTicksLeft = (stack.maxDamage - stack.damage) * ticksPerDamage
-            val tagTicksLeft = stack.tag?.getInt("TicksLeft") ?: 0
+            val tagTicksLeft = stack.nbt?.getInt("TicksLeft") ?: 0
             return (damageTicksLeft + tagTicksLeft) / 20.0
         }
     }

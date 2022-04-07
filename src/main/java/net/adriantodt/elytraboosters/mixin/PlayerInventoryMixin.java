@@ -139,14 +139,14 @@ public abstract class PlayerInventoryMixin implements ExpandedPlayerInventory {
             ItemStack itemStack = this.offHand.get(i);
             Item item = itemStack.getItem();
             if (!Objects.equals(itemStack, ignore) && item instanceof BoosterItem) {
-                itemStack.getOrCreateTag().putBoolean("Active", false);
+                itemStack.getOrCreateNbt().putBoolean("Active", false);
             }
         }
         for (int i = 0; i < this.main.size(); i++) {
             ItemStack itemStack = this.main.get(i);
             Item item = itemStack.getItem();
             if (!Objects.equals(itemStack, ignore) && item instanceof BoosterItem) {
-                itemStack.getOrCreateTag().putBoolean("Active", false);
+                itemStack.getOrCreateNbt().putBoolean("Active", false);
             }
         }
     }

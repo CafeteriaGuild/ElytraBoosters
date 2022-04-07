@@ -22,13 +22,13 @@ class BoosterItem(settings: Settings, private val data: ElytraBoostersData.Boost
     override fun use(world: World?, user: PlayerEntity, hand: Hand): TypedActionResult<ItemStack> {
         val stack = user.getStackInHand(hand)
 
-        if (stack?.tag?.active == true) {
-            stack.orCreateTag.active = false
+        if (stack?.nbt?.active == true) {
+            stack.orCreateNbt.active = false
             return TypedActionResult.success(stack)
         } else {
             if (user.isFallFlying) {
                 (user.inventory as ExpandedPlayerInventory).ensureOnlyActiveBooster(null)
-                stack.orCreateTag.active = true
+                stack.orCreateNbt.active = true
                 return TypedActionResult.success(stack)
             }
             return TypedActionResult.fail(stack)
@@ -36,11 +36,11 @@ class BoosterItem(settings: Settings, private val data: ElytraBoostersData.Boost
     }
 
     override fun inventoryTick(stack: ItemStack, world: World, user: Entity, slot: Int, selected: Boolean) {
-        if (stack.tag?.active == true && user is PlayerEntity) {
+        if (stack.nbt?.active == true && user is PlayerEntity) {
             val inv = user.inventory as ExpandedPlayerInventory
             if (user.isFallFlying) {
-                val ticksLeft = stack.tag?.getInt("TicksLeft") ?: 0
-                val unbreakable = stack.tag?.getBoolean("Unbreakable") ?: false
+                val ticksLeft = stack.nbt?.getInt("TicksLeft") ?: 0
+                val unbreakable = stack.nbt?.getBoolean("Unbreakable") ?: false
                 if (world.isClient && ticksLeft % 5 == 1) {
                     world.addParticle(
                         ParticleTypes.FIREWORK,
@@ -56,13 +56,13 @@ class BoosterItem(settings: Settings, private val data: ElytraBoostersData.Boost
                         inv.ensureOnlyActiveBooster(stack)
                     }
                     ticksLeft > 0 -> {
-                        stack.orCreateTag.putInt("TicksLeft", ticksLeft - 1)
+                        stack.orCreateNbt.putInt("TicksLeft", ticksLeft - 1)
                         data.applyBoost(user)
                         inv.ensureOnlyActiveBooster(stack)
                     }
                     stack.damage < stack.maxDamage -> {
                         stack.damage++
-                        stack.orCreateTag.putInt("TicksLeft", data.ticksPerDamage)
+                        stack.orCreateNbt.putInt("TicksLeft", data.ticksPerDamage)
                         data.applyBoost(user)
                         inv.ensureOnlyActiveBooster(stack)
                     }
@@ -72,12 +72,12 @@ class BoosterItem(settings: Settings, private val data: ElytraBoostersData.Boost
                 }
                 return
             }
-            stack.orCreateTag.active = false
+            stack.orCreateNbt.active = false
         }
     }
 
     override fun getTranslationKey(stack: ItemStack?): String {
-        if (stack?.tag?.active == true) {
+        if (stack?.nbt?.active == true) {
             return super.getTranslationKey(stack) + "_active"
         }
         return super.getTranslationKey(stack)
@@ -87,7 +87,7 @@ class BoosterItem(settings: Settings, private val data: ElytraBoostersData.Boost
     override fun appendTooltip(stack: ItemStack, world: World?, tooltip: MutableList<Text>, ctx: TooltipContext) {
         tooltip += TranslatableText("$translationKey.description")
 
-        if (stack.tag?.active == true) {
+        if (stack.nbt?.active == true) {
             tooltip += TranslatableText("tooltip.elytraboosters.deactivate_booster")
             tooltip += TranslatableText("tooltip.elytraboosters.autodeactivate_booster")
         } else {

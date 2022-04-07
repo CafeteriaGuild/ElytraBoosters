@@ -11,8 +11,6 @@ plugins {
 repositories {
     jcenter()
     maven { url = uri("https://maven.fabricmc.net/") }
-    maven { url = uri("https://dl.bintray.com/ladysnake/libs") }
-    maven { url = uri("https://dl.bintray.com/adriantodt/maven") }
     maven { url = uri("https://maven.abusedmaster.xyz/") }
     maven { url = uri("https://jitpack.io") }
     maven { url = uri("https://maven.terraformersmc.com/releases/") }
@@ -42,7 +40,7 @@ dependencies {
     modCompileOnly("com.terraformersmc:modmenu:${project.extra["modmenu_version"]}")
 
     // Test environiment with some mods
-    modRuntime("me.shedaniel:RoughlyEnoughItems-fabric:${project.extra["rei_version"]}") {
+    modRuntimeOnly("me.shedaniel:RoughlyEnoughItems-fabric:${project.extra["rei_version"]}") {
         exclude("me.shedaniel.cloth")
     }
 
@@ -51,8 +49,6 @@ dependencies {
 base.archivesBaseName = "${project.extra["archives_base_name"]}"
 group = "${project.extra["maven_group"]}"
 version = "${project.extra["mod_version"]}"
-
-minecraft {}
 
 java {
     sourceCompatibility = JavaVersion.VERSION_16
