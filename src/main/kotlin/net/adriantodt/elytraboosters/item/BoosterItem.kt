@@ -13,7 +13,6 @@ import net.minecraft.item.Item
 import net.minecraft.item.ItemStack
 import net.minecraft.particle.ParticleTypes
 import net.minecraft.text.Text
-import net.minecraft.text.TranslatableText
 import net.minecraft.util.Hand
 import net.minecraft.util.TypedActionResult
 import net.minecraft.world.World
@@ -85,17 +84,17 @@ class BoosterItem(settings: Settings, private val data: ElytraBoostersData.Boost
 
     @Environment(EnvType.CLIENT)
     override fun appendTooltip(stack: ItemStack, world: World?, tooltip: MutableList<Text>, ctx: TooltipContext) {
-        tooltip += TranslatableText("$translationKey.description")
+        tooltip += Text.translatable("$translationKey.description")
 
         if (stack.nbt?.active == true) {
-            tooltip += TranslatableText("tooltip.elytraboosters.deactivate_booster")
-            tooltip += TranslatableText("tooltip.elytraboosters.autodeactivate_booster")
+            tooltip += Text.translatable("tooltip.elytraboosters.deactivate_booster")
+            tooltip += Text.translatable("tooltip.elytraboosters.autodeactivate_booster")
         } else {
-            tooltip += TranslatableText("tooltip.elytraboosters.activate_booster")
+            tooltip += Text.translatable("tooltip.elytraboosters.activate_booster")
         }
 
         if (ctx.isAdvanced) {
-            tooltip += TranslatableText("tooltip.elytraboosters.time_left", data.secondsLeft(stack))
+            tooltip += Text.translatable("tooltip.elytraboosters.time_left", data.secondsLeft(stack))
         }
     }
 }

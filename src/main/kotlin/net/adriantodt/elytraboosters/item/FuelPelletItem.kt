@@ -13,7 +13,6 @@ import net.minecraft.entity.player.PlayerEntity
 import net.minecraft.item.Item
 import net.minecraft.item.ItemStack
 import net.minecraft.text.Text
-import net.minecraft.text.TranslatableText
 import net.minecraft.util.Hand
 import net.minecraft.util.TypedActionResult
 import net.minecraft.world.World
@@ -38,11 +37,11 @@ class FuelPelletItem(settings: Settings, private val data: ElytraBoostersData.Fu
 
     @Environment(EnvType.CLIENT)
     override fun appendTooltip(stack: ItemStack?, world: World?, tooltip: MutableList<Text?>, ctx: TooltipContext?) {
-        tooltip += TranslatableText("$translationKey.description")
-        tooltip += TranslatableText("tooltip.elytraboosters.craft_booster1")
-        tooltip += TranslatableText(
+        tooltip += Text.translatable("$translationKey.description")
+        tooltip += Text.translatable("tooltip.elytraboosters.craft_booster1")
+        tooltip += Text.translatable(
             "tooltip.elytraboosters.craft_booster2",
-            TranslatableText(data.resultItem.translationKey)
+            Text.translatable(data.resultItem.translationKey)
         )
     }
 }

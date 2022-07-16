@@ -3,7 +3,7 @@ package net.adriantodt.elytraboosters
 import io.netty.buffer.Unpooled
 import net.adriantodt.elytraboosters.ElytraBoosters.configHolder
 import net.adriantodt.elytraboosters.data.ElytraBoostersData.BoosterType.*
-import net.fabricmc.fabric.api.network.ServerSidePacketRegistry
+import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking
 import net.minecraft.nbt.NbtCompound
 import net.minecraft.network.PacketByteBuf
 import net.minecraft.server.network.ServerPlayerEntity
@@ -40,7 +40,7 @@ object ElytraBoostersPacketHandler {
         )
         tag.putDouble("fastBoosterFrictionFactor", configHolder.config.fastBooster.frictionFactor)
         tag.putInt("fastBoosterTicksPerDamage", configHolder.config.fastBooster.ticksPerDamage)
-        ServerSidePacketRegistry.INSTANCE.sendToPlayer(
+        ServerPlayNetworking.send(
             player, sync, PacketByteBuf(Unpooled.buffer()).writeNbt(tag)
         )
     }

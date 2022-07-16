@@ -11,8 +11,6 @@ plugins {
 repositories {
     jcenter()
     maven { url = uri("https://maven.fabricmc.net/") }
-    maven { url = uri("https://maven.abusedmaster.xyz/") }
-    maven { url = uri("https://jitpack.io") }
     maven { url = uri("https://maven.terraformersmc.com/releases/") }
     maven { url = uri("https://maven.shedaniel.me") }
 }
@@ -51,11 +49,11 @@ group = "${project.extra["maven_group"]}"
 version = "${project.extra["mod_version"]}"
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_16
-    targetCompatibility = JavaVersion.VERSION_16
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
 }
 
-tasks.withType<KotlinCompile> { kotlinOptions.jvmTarget = "16" }
+tasks.withType<KotlinCompile> { kotlinOptions.jvmTarget = "17" }
 tasks.withType<JavaCompile> { options.encoding = "UTF-8" }
 
 tasks.processResources {
