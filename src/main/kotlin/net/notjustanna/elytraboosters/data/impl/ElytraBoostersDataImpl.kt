@@ -1,12 +1,12 @@
-package net.adriantodt.elytraboosters.data.impl
+package net.notjustanna.elytraboosters.data.impl
 
-import net.adriantodt.elytraboosters.ElytraBoostersItems.fastBooster
-import net.adriantodt.elytraboosters.ElytraBoostersItems.slowBooster
-import net.adriantodt.elytraboosters.ElytraBoostersItems.standardBooster
-import net.adriantodt.elytraboosters.data.ElytraBoostersConfig
-import net.adriantodt.elytraboosters.data.ElytraBoostersData
-import net.adriantodt.elytraboosters.data.ElytraBoostersData.BoosterType
-import net.adriantodt.elytraboosters.data.ElytraBoostersData.BoosterType.*
+import net.notjustanna.elytraboosters.ElytraBoostersItems.fastBooster
+import net.notjustanna.elytraboosters.ElytraBoostersItems.slowBooster
+import net.notjustanna.elytraboosters.ElytraBoostersItems.standardBooster
+import net.notjustanna.elytraboosters.data.ElytraBoostersConfig
+import net.notjustanna.elytraboosters.data.ElytraBoostersData
+import net.notjustanna.elytraboosters.data.ElytraBoostersData.BoosterType
+import net.notjustanna.elytraboosters.data.ElytraBoostersData.BoosterType.*
 
 class ElytraBoostersDataImpl(config: ElytraBoostersConfig) : ElytraBoostersData {
     override val launcherVelocity = BoosterVelocityImpl(config.forwardLauncher)

@@ -1,6 +1,6 @@
 {
   "required": true,
-  "package": "net.adriantodt.elytraboosters.mixin",
+  "package": "net.notjustanna.elytraboosters.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
     "PlayerInventoryMixin",

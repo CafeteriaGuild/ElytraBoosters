@@ -1,11 +1,11 @@
-package net.adriantodt.elytraboosters
+package net.notjustanna.elytraboosters
 
 import me.shedaniel.autoconfig.AutoConfig
 import me.shedaniel.autoconfig.ConfigHolder
 import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer
-import net.adriantodt.elytraboosters.data.ElytraBoostersConfig
-import net.adriantodt.elytraboosters.data.ElytraBoostersData
-import net.adriantodt.elytraboosters.data.impl.ElytraBoostersDataImpl
+import net.notjustanna.elytraboosters.data.ElytraBoostersConfig
+import net.notjustanna.elytraboosters.data.ElytraBoostersData
+import net.notjustanna.elytraboosters.data.impl.ElytraBoostersDataImpl
 import net.fabricmc.api.ModInitializer
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger

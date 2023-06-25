@@ -1,11 +1,11 @@
-package net.adriantodt.elytraboosters.item
+package net.notjustanna.elytraboosters.item
 
-import net.adriantodt.elytraboosters.ElytraBoostersItems.emptyBooster
-import net.adriantodt.elytraboosters.ElytraBoostersItems.fastFuelPellet
-import net.adriantodt.elytraboosters.ElytraBoostersItems.slowFuelPellet
-import net.adriantodt.elytraboosters.ElytraBoostersItems.standardFuelPellet
-import net.adriantodt.elytraboosters.ExpandedPlayerInventory
-import net.adriantodt.elytraboosters.data.ElytraBoostersData
+import net.notjustanna.elytraboosters.ElytraBoostersItems.emptyBooster
+import net.notjustanna.elytraboosters.ElytraBoostersItems.fastFuelPellet
+import net.notjustanna.elytraboosters.ElytraBoostersItems.slowFuelPellet
+import net.notjustanna.elytraboosters.ElytraBoostersItems.standardFuelPellet
+import net.notjustanna.elytraboosters.ExpandedPlayerInventory
+import net.notjustanna.elytraboosters.data.ElytraBoostersData
 import net.fabricmc.api.EnvType
 import net.fabricmc.api.Environment
 import net.minecraft.client.item.TooltipContext

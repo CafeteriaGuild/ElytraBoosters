@@ -1,8 +1,8 @@
-package net.adriantodt.elytraboosters.data
+package net.notjustanna.elytraboosters.data
 
-import net.adriantodt.elytraboosters.item.BoosterItem
-import net.adriantodt.elytraboosters.plus
-import net.adriantodt.elytraboosters.times
+import net.notjustanna.elytraboosters.item.BoosterItem
+import net.notjustanna.elytraboosters.plus
+import net.notjustanna.elytraboosters.times
 import net.minecraft.entity.LivingEntity
 import net.minecraft.item.Item
 import net.minecraft.item.ItemStack

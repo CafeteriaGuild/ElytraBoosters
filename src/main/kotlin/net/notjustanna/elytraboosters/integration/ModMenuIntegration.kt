@@ -1,9 +1,9 @@
-package net.adriantodt.elytraboosters.integration
+package net.notjustanna.elytraboosters.integration
 
 import com.terraformersmc.modmenu.api.ConfigScreenFactory
 import com.terraformersmc.modmenu.api.ModMenuApi
 import me.shedaniel.autoconfig.AutoConfig
-import net.adriantodt.elytraboosters.data.ElytraBoostersConfig
+import net.notjustanna.elytraboosters.data.ElytraBoostersConfig
 import net.fabricmc.api.EnvType
 import net.fabricmc.api.Environment
 

@@ -1,9 +1,9 @@
-package net.adriantodt.elytraboosters.item
+package net.notjustanna.elytraboosters.item
 
-import net.adriantodt.elytraboosters.ElytraBoostersItems
-import net.adriantodt.elytraboosters.ExpandedPlayerInventory
-import net.adriantodt.elytraboosters.active
-import net.adriantodt.elytraboosters.data.ElytraBoostersData
+import net.notjustanna.elytraboosters.ElytraBoostersItems
+import net.notjustanna.elytraboosters.ExpandedPlayerInventory
+import net.notjustanna.elytraboosters.active
+import net.notjustanna.elytraboosters.data.ElytraBoostersData
 import net.fabricmc.api.EnvType
 import net.fabricmc.api.Environment
 import net.minecraft.client.item.TooltipContext

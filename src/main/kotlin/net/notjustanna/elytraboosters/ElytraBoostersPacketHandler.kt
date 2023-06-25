@@ -1,8 +1,8 @@
-package net.adriantodt.elytraboosters
+package net.notjustanna.elytraboosters
 
 import io.netty.buffer.Unpooled
-import net.adriantodt.elytraboosters.ElytraBoosters.configHolder
-import net.adriantodt.elytraboosters.data.ElytraBoostersData.BoosterType.*
+import net.notjustanna.elytraboosters.ElytraBoosters.configHolder
+import net.notjustanna.elytraboosters.data.ElytraBoostersData.BoosterType.*
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking
 import net.minecraft.nbt.NbtCompound
 import net.minecraft.network.PacketByteBuf

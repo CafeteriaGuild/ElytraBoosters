@@ -1,4 +1,4 @@
-package net.adriantodt.elytraboosters.item
+package net.notjustanna.elytraboosters.item
 
 import net.fabricmc.api.EnvType
 import net.fabricmc.api.Environment

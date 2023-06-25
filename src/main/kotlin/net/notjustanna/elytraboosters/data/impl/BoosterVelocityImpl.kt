@@ -1,7 +1,7 @@
-package net.adriantodt.elytraboosters.data.impl
+package net.notjustanna.elytraboosters.data.impl
 
-import net.adriantodt.elytraboosters.data.ElytraBoostersConfig
-import net.adriantodt.elytraboosters.data.ElytraBoostersData
+import net.notjustanna.elytraboosters.data.ElytraBoostersConfig
+import net.notjustanna.elytraboosters.data.ElytraBoostersData
 
 class BoosterVelocityImpl(
     override var constantVelocity: Double,

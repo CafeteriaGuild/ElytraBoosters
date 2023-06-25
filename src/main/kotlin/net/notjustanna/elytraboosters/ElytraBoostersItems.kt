@@ -1,11 +1,11 @@
-package net.adriantodt.elytraboosters
+package net.notjustanna.elytraboosters
 
-import net.adriantodt.elytraboosters.ElytraBoosters.data
-import net.adriantodt.elytraboosters.data.ElytraBoostersData.BoosterType.*
-import net.adriantodt.elytraboosters.item.BoosterItem
-import net.adriantodt.elytraboosters.item.ForwardLauncherItem
-import net.adriantodt.elytraboosters.item.FuelPelletItem
-import net.adriantodt.elytraboosters.item.LoreItem
+import net.notjustanna.elytraboosters.ElytraBoosters.data
+import net.notjustanna.elytraboosters.data.ElytraBoostersData.BoosterType.*
+import net.notjustanna.elytraboosters.item.BoosterItem
+import net.notjustanna.elytraboosters.item.ForwardLauncherItem
+import net.notjustanna.elytraboosters.item.FuelPelletItem
+import net.notjustanna.elytraboosters.item.LoreItem
 
 @Suppress("MemberVisibilityCanBePrivate")
 object ElytraBoostersItems {

@@ -1,4 +1,4 @@
-package net.adriantodt.elytraboosters.data
+package net.notjustanna.elytraboosters.data
 
 import me.shedaniel.autoconfig.annotation.Config
 import me.shedaniel.autoconfig.annotation.ConfigEntry

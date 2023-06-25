@@ -1,7 +1,7 @@
-package net.adriantodt.elytraboosters.item
+package net.notjustanna.elytraboosters.item
 
-import net.adriantodt.elytraboosters.ElytraBoostersItems.emptyBooster
-import net.adriantodt.elytraboosters.data.ElytraBoostersData.BoosterVelocity
+import net.notjustanna.elytraboosters.ElytraBoostersItems.emptyBooster
+import net.notjustanna.elytraboosters.data.ElytraBoostersData.BoosterVelocity
 import net.fabricmc.api.EnvType
 import net.fabricmc.api.Environment
 import net.minecraft.client.item.TooltipContext

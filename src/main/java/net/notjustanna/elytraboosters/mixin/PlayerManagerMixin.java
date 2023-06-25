@@ -1,9 +1,10 @@
-package net.adriantodt.elytraboosters.mixin;
+package net.notjustanna.elytraboosters.mixin;
 
-import net.adriantodt.elytraboosters.ElytraBoostersPacketHandler;
+import net.notjustanna.elytraboosters.ElytraBoostersPacketHandler;
 import net.minecraft.network.ClientConnection;
 import net.minecraft.server.PlayerManager;
 import net.minecraft.server.network.ServerPlayerEntity;
+import net.notjustanna.elytraboosters.ElytraBoostersPacketHandler;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;

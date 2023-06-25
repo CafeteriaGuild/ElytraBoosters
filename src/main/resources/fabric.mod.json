@@ -6,16 +6,13 @@
   "description": "The Ultimate Firework Rocket Killer!",
   "authors": [
     {
-      "name": "AdrianTodt",
-      "contact": {
-        "homepage": "https://twitter.com/AdrianTodt"
-      }
+      "name": "NotJustAnna"
     }
   ],
   "contact": {
     "homepage": "https://www.curseforge.com/minecraft/mc-mods/elytraboosters",
-    "issues": "https://github.com/AdrianTodt/elytraboosters/issues",
-    "sources": "https://github.com/AdrianTodt/elytraboosters"
+    "issues": "https://github.com/CafeteriaGuild/ElytraBoosters/issues",
+    "sources": "https://github.com/CafeteriaGuild/ElytraBoosters"
   },
   "license": "Apache-2.0",
   "icon": "assets/elytraboosters/textures/icon.png",
@@ -24,17 +21,17 @@
     "main": [
       {
         "adapter": "kotlin",
-        "value": "net.adriantodt.elytraboosters.ElytraBoosters"
+        "value": "net.notjustanna.elytraboosters.ElytraBoosters"
       }
     ],
     "client": [
       {
         "adapter": "kotlin",
-        "value": "net.adriantodt.elytraboosters.ElytraBoostersClient"
+        "value": "net.notjustanna.elytraboosters.ElytraBoostersClient"
       }
     ],
     "modmenu": [
-      "net.adriantodt.elytraboosters.integration.ModMenuIntegration"
+      "net.notjustanna.elytraboosters.integration.ModMenuIntegration"
     ]
   },
   "mixins": [
@@ -44,6 +41,6 @@
     "fabricloader": ">=0.8.7",
     "fabric": "*",
     "fabric-language-kotlin": "*",
-    "minecraft": "1.19"
+    "minecraft": "1.20.x"
   }
 }

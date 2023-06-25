@@ -1,7 +1,7 @@
-package net.adriantodt.elytraboosters.data.impl
+package net.notjustanna.elytraboosters.data.impl
 
-import net.adriantodt.elytraboosters.data.ElytraBoostersData
-import net.adriantodt.elytraboosters.item.BoosterItem
+import net.notjustanna.elytraboosters.data.ElytraBoostersData
+import net.notjustanna.elytraboosters.item.BoosterItem
 
 class FuelPelletDataImpl(
     override val standardPellets: Int,

@@ -1,7 +1,7 @@
-package net.adriantodt.elytraboosters.mixin;
+package net.notjustanna.elytraboosters.mixin;
 
-import net.adriantodt.elytraboosters.ExpandedPlayerInventory;
-import net.adriantodt.elytraboosters.item.BoosterItem;
+import net.notjustanna.elytraboosters.ExpandedPlayerInventory;
+import net.notjustanna.elytraboosters.item.BoosterItem;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.item.Item;

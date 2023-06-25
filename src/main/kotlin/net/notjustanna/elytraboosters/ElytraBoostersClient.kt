@@ -1,6 +1,6 @@
-package net.adriantodt.elytraboosters
+package net.notjustanna.elytraboosters
 
-import net.adriantodt.elytraboosters.item.BoosterModelPredicateProvider
+import net.notjustanna.elytraboosters.item.BoosterModelPredicateProvider
 import net.fabricmc.api.ClientModInitializer
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking
 import net.fabricmc.fabric.api.`object`.builder.v1.client.model.FabricModelPredicateProviderRegistry

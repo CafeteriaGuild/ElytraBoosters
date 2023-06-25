@@ -1,4 +1,4 @@
-package net.adriantodt.elytraboosters;
+package net.notjustanna.elytraboosters;
 
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ItemStack;
