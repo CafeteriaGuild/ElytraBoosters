@@ -1,5 +1,7 @@
 package net.notjustanna.elytraboosters
 
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents
+import net.minecraft.item.ItemGroups
 import net.notjustanna.elytraboosters.ElytraBoosters.data
 import net.notjustanna.elytraboosters.data.ElytraBoostersData.BoosterType.*
 import net.notjustanna.elytraboosters.item.BoosterItem
@@ -36,6 +38,17 @@ object ElytraBoostersItems {
         identifier("fuel_pellet_standard").item(standardFuelPellet)
         identifier("fuel_pellet_fast").item(fastFuelPellet)
         identifier("fuel_pellet_slow").item(slowFuelPellet)
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register { group ->
+            group.add(emptyBooster)
+            group.add(fastBooster)
+            group.add(standardBooster)
+            group.add(slowBooster)
+            group.add(forwardLauncher)
+            group.add(standardFuelPellet)
+            group.add(slowFuelPellet)
+            group.add(fastFuelPellet)
+        }
     }
 
     fun boosterItems() = listOf(fastBooster, standardBooster, slowBooster)
